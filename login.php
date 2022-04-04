@@ -152,22 +152,23 @@ include './header.inc.php';
       <h1 class="signup-title">Login</h1>
       <form class="login-form" action="./login.inc.php" method="post">
         <label>Email</label>
-        <input type="text" name="name" placeholder="Username or Email">
+        <input type="text" name="uid" placeholder="Username or Email">
         <label>Password</label>
         <input type="password" name="pwd" placeholder="Password">
         <a href="./index.php">
-          <button class="login-btn" type="submit" name="submit">Login</button>
+          <input class="login-btn" type="submit" name="submit"></input>
       </form>
     </div>
-    <p class="login-para">Don't have an account?</p><a class="login-link" href="./signup-page.php" <a />Sign up here
-
+    <div class="login-info">
+      <p class="login-para">Don't have an account?</p><a class="login-link" href="./signup-page.php" <a />Sign up here
+    </div>
     <?php
     // Error messages
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
-        echo "<p>Fill in all fields!</p>";
+        echo '<div style="font-size:24px;color:red;font-weight:500;letter-spacing:2px;">Fill in All Fields! </div>';
       } else if ($_GET["error"] == "wronglogin") {
-        echo "<p>Wrong login!</p>";
+        echo '<div style="font-size:24px;color:red;font-weight:500;letter-spacing:2px;">Wrong Login! </div>';
       }
     }
     ?>

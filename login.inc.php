@@ -13,16 +13,16 @@ if (isset($_POST["submit"])) {
   require_once 'functions.inc.php';
 
   // Left inputs empty
-  // if (emptyInputLogin($username, $pwd) === true) {
-  //   header("location: ../login.php?error=emptyinput");
-  //   exit();
-  // }
+  if (emptyInputLogin($username, $pwd) !== false) {
+    header("location: ./login.php?error=emptyinput");
+    exit();
+  }
 
   // If we get to here, it means there are no user errors
 
   // Now we insert the user into the database
   loginUser($conn, $username, $pwd);
 } else {
-  header("location: ../login.php");
+  header("location: ./login.php");
   exit();
 }

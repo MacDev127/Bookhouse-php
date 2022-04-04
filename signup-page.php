@@ -1,7 +1,7 @@
 <?php
 include_once './db.inc.php';
 include './header.inc.php';
-
+include './functions.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -140,17 +140,44 @@ include './header.inc.php';
         <label>Confirm Password</label>
         <input type="password" name="pwdrepeat" placeholder="">
         <a href="./index.php">
-          <button class="login-btn" type="submit" name="submit">Sign Up</button>
+          <input class="login-btn" type="submit" name="submit"></input><a />
 
 
       </form>
       <p>By clicking the signup button you agree to our T's & C's.</p>
       <p class="tc" href="#">Terms & Conditions</p>
     </div>
-    <p class="para-2">Already have an account?</p> <a class="para-2-link" href="./login.php">Login Here</a>
+    <div class="form-info">
+      <p class="para-2">Already have an account?</p> <a class="para-2-link" href="./login.php">Login Here</a>
+    </div>
 
+    <div class="error-box">
 
+      <?php
+      // Error messages
+      if (isset($_GET["error"])) {
+        if ($_GET["error"] == "emptyinput") {
+          echo '<div style="font-size:24px;color:red;font-weight:500;letter-spacing:2px;">Fill in All Fields! </div>';
+        } else if ($_GET["error"] == "invaliduid") {
+          echo '<div style="font-size:20px;color:red;font-weight:500;letter-spacing:2px;">Choose another username! </div>';
+        } else if ($_GET["error"] == "invalidemail") {
+          echo '<div style="font-size:20px;color:red;font-weight:500;letter-spacing:2px;">Invalid Email </div>';
+        } else if ($_GET["error"] == "passwordsdontmatch") {
+          echo '<div style="font-size:20px;color:red;font-weight:500;letter-spacing:2px;">Passwords dont match! </div>';
+        } else if ($_GET["error"] == "stmtfailed") {
+          echo '<div style="font-size:20px;color:red;font-weight:500;letter-spacing:2px;">Something went wrong! </div>';
+        } else if ($_GET["error"] == "usernametaken") {
+          echo '<div style="font-size:20px;color:red;font-weight:500;letter-spacing:2px;">Username already taken! </div>';
+        } else if ($_GET["error"] == "emailtaken") {
+          echo '<div style="font-size:20px;color:red;font-weight:bold;">Email already taken! </div>';
+        } else if ($_GET["error"] == "none") {
+          echo '<div style="font-size:20px;color:white;font-weight:500;letter-spacing:2px;">You have Signed up! </div>';
+        }
+      }
+      ?>
+    </div>
   </section>
+
 
   <!-- Sign Up Form -->
 

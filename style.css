@@ -859,7 +859,7 @@ td a {
 
 .signup .para-2 {
   text-align: center;
-  margin-top: 10px;
+
   font-size: 14px;
   color: #fff;
 }
@@ -867,13 +867,23 @@ td a {
 .para-2-link {
   color: #fff;
   text-transform: underline;
-  font-size: 12px;
-  margin-top: 10px;
+  font-size: 14px;
+  margin-right: 10px;
 }
 
 .para-2-link:hover {
   text-decoration: underline;
   color: #fff;
+}
+
+.form-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-info a {
+  padding-right: 10px;
 }
 .signup-box {
   display: flex;
@@ -919,7 +929,7 @@ td a {
   border-radius: 6px;
 }
 
-button[type="submit"] {
+input[type="submit"] {
   width: 100%;
   margin-top: 30px;
   border-radius: 25px;
@@ -935,6 +945,12 @@ button[type="submit"] {
 input[type="button"]:hover {
   transform: scale(0.97);
 }
+
+.error-box {
+  padding: 20px 30px;
+  margin-top: 20px;
+}
+
 /* -----------------Sign up page end------------------ */
 
 /* Login page */
@@ -979,6 +995,17 @@ input[type="button"]:hover {
   border-radius: 6px;
 }
 
+.login-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 30px;
+}
+
+.login-info a {
+  padding-right: 10px;
+}
+
 button[type="submit"] {
   width: 100%;
   margin-top: 30px;
@@ -998,14 +1025,12 @@ button[type="submit"] {
 
 .login-para {
   text-align: center;
-  margin-top: 12px;
   font-size: 14px;
   color: #fff;
 }
 
 .login-link {
-  margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
   color: #fff;
 }
 
@@ -1015,6 +1040,51 @@ button[type="submit"] {
 }
 
 /* Login page end */
+
+/* success page */
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+}
+
+.result-box {
+  height: 600px;
+  width: 1200px;
+  background: #01345b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10%;
+  flex-wrap: wrap;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.result-box h1 {
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.result-box .result-link {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 300;
+}
+
+.result-box a:hover {
+  transform: scale(0.97);
+}
+
+.error-msg {
+  background-color: #fff;
+}
+/* success page end */
 
 /* -----------------------Footer --------------------------------------*/
 footer {

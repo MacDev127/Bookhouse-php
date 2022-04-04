@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +60,17 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
+
+        <?php
+        // if (isset($_SESSION["userid"])) {
+        //   echo "<li><a href='profile.php'>Profile Page<a/></li>";
+        //   echo "<li><a href='logout.php'>Log out<a/></li>";
+        // } else {
+        //   echo "<li><a href='profile.php'>Profile Page<a/></li>";
+        //   echo "<li><a href='logout.php'>Log out<a/></li>";
+        // }
+
+        ?>
         <li><a href="#">Login</a></li>
 
 
@@ -79,6 +94,16 @@
           <ul class="nav-drop-menu">
             <div class="center">
               <h1>Login</h1>
+
+
+              <!-- <form class="login-form" action="./login.inc.php" method="post">
+                <label>Email</label>
+                <input type="text" name="uid" placeholder="Username or Email">
+                <label>Password</label>
+                <input type="password" name="pwd" placeholder="Password">
+                <a href="./index.php">
+                  <input class="login-btn" type="submit" name="submit"></input>
+              </form> -->
               <form method="post">
                 <div class="txt_field">
                   <input type="text" required>
@@ -96,6 +121,9 @@
                   Not a member? <a href="./signup-page.php">Signup</a>
                 </div>
               </form>
+
+
+
             </div>
           </ul>
           <!-- <span class="cart"><i class="fas fa-shopping-cart"></i></span> -->

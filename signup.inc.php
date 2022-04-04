@@ -19,27 +19,31 @@ if (isset($_POST["submit"])) {
   // Left inputs empty
   // We set the functions "!== false" since "=== true" has a risk of giving us the wrong outcome
   if (emptyInputSignup($first, $last, $email, $username, $pwd, $pwdRepeat) !== false) {
-    header("location: ../signup-page.php?error=emptyinput");
+    header("location: ./signup-page.php?error=emptyinput");
     exit();
   }
   // Proper username chosen
   if (invalidUid($uid) !== false) {
-    header("location: ../signup-page.php?error=invaliduid");
+    header("location: ./signup-page.php?error=invaliduid");
     exit();
   }
   // Proper email chosen
   if (invalidEmail($email) !== false) {
-    header("location: ../signup-page.php?error=invalidemail");
+    header("location: ./signup-page.php?error=invalidemail");
     exit();
   }
   // Do the two passwords match?
   if (pwdMatch($pwd, $pwdRepeat) !== false) {
-    header("location: ../signup-page.php?error=passwordsdontmatch");
+    header("location: ./signup-page.php?error=passwordsdontmatch");
     exit();
   }
   // Is the username taken already
   if (uidExists($conn, $username) !== false) {
-    header("location: ../signup-page.php?error=usernametaken");
+    header("location: ./signup-page.php?error=usernametaken");
+    exit();
+  }
+  if (uidExists($conn, $email) !== false) {
+    header("location: ./signup-page.php?error=emailtaken");
     exit();
   }
 
@@ -48,7 +52,7 @@ if (isset($_POST["submit"])) {
   // Now we insert the user into the database
   createUser($conn, $first, $last, $email, $username, $pwd);
 } else {
-  header("location: ../signup-page.php");
+  header("location: ./signup-page.php");
   exit();
 }
 
