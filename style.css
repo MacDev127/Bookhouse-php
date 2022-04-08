@@ -1053,15 +1053,15 @@ button[type="submit"] {
 
 .result-box {
   height: 600px;
-  width: 1200px;
+  width: 800px;
   background: #01345b;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 10%;
-  flex-wrap: wrap;
+  margin: auto;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
 }
 
 .result-box h1 {
@@ -1143,7 +1143,17 @@ button[type="submit"] {
 .info-item {
   width: 100%;
 }
-input {
+.grade-box {
+  width: calc(100% - 57px);
+  height: 36px;
+  padding-left: 10px;
+  margin: 0 0 12px -5px;
+  border-radius: 0 5px 5px 0;
+  border: solid 1px #cbc9c9;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
+  background: #fff;
+}
+.icon-box {
   width: calc(100% - 57px);
   height: 36px;
   padding-left: 10px;
@@ -1220,7 +1230,7 @@ textarea {
   padding: 8px;
   border-radius: 5px;
   border: none;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
 }

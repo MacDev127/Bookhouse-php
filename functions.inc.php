@@ -98,6 +98,27 @@ function createUser($conn, $first, $last, $email, $username, $pwd)
   exit();
 }
 
+function createReview($conn, $first, $last, $email, $bookname, $grade, $review)
+{
+  $sql = "INSERT INTO review (first_name, last_name, customer_email, bookname, grade, review) VALUES (?, ?, ?, ?, ?, ?);";
+
+  $stmt = mysqli_stmt_init($conn);
+  if (!mysqli_stmt_prepare($stmt, $sql)) {
+    header("location: ./review.php?error=stmtfailed");
+    exit();
+  }
+
+
+  mysqli_stmt_bind_param($stmt, "ssssss", $first, $last, $email, $bookname, $grade, $review);
+  mysqli_stmt_execute($stmt);
+  mysqli_stmt_close($stmt);
+  mysqli_close($conn);
+  header("location: ./success.php?success=review_created");
+
+
+  exit();
+}
+
 // Check for empty input login
 function emptyInputLogin($username, $pwd)
 {
@@ -109,6 +130,9 @@ function emptyInputLogin($username, $pwd)
   }
   return $result;
 }
+
+//Check for empty review input
+
 
 // Log user into website
 function loginUser($conn, $username, $pwd)

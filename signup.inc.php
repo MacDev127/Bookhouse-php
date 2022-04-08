@@ -79,14 +79,14 @@ if (isset($_POST["submit"])) {
 
 // header("Location: ../cart.php?signup=success");
 
-$first = $_POST['first'];
-$last = $_POST['last'];
-$email = $_POST['email'];
-$rating = $_POST['rating'];
-$review = $_POST['review'];
+// $first = $_POST['first'];
+// $last = $_POST['last'];
+// $email = $_POST['email'];
+// $rating = $_POST['rating'];
+// $review = $_POST['review'];
 // $date = $_POST['Review_date'];
 
-$sql = "INSERT INTO `review-test` ( `First_name`, `Last_name`, `Customer_email`, `Rating`, `Review`) VALUES ($first, $last, $email, $rating, $review);";
-mysqli_query($conn, $sql);
+// $sql = "INSERT INTO `review-test` ( `First_name`, `Last_name`, `Customer_email`, `Rating`, `Review`) VALUES ($first, $last, $email, $rating, $review);";
+// mysqli_query($conn, $sql);
 
-header("Location: ./index.php?review=success");
+// header("Location: ./index.php?review=success");
