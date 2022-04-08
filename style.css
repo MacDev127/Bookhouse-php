@@ -1131,7 +1131,6 @@ button[type="submit"] {
   justify-content: center;
   align-items: center;
   box-shadow: rgb(20, 20, 20) 0px 20px 30px -10px;
-
   height: 500px;
   width: 66%;
   padding: 20px;
@@ -1155,12 +1154,20 @@ input {
   background: #fff;
 }
 .icon {
-  padding: 9px 15px;
+  padding: 10px 15px;
   margin-top: -1px;
   border-radius: 5px 0 0 5px;
   border: solid 0px #cbc9c9;
-  background: #666;
+  background-color: #01345b;
   color: #fff;
+  font-size: 12px;
+}
+
+.review-sub {
+  font-size: 20px;
+  margin: 10px 0 3px 0;
+  color: #01345b;
+  font-weight: 400px;
 }
 input[type="radio"] {
   display: none;
@@ -1168,9 +1175,16 @@ input[type="radio"] {
 label.radio {
   position: relative;
   display: inline-block;
-  text-indent: 32px;
+  text-indent: 38px;
   cursor: pointer;
 }
+
+.radio-btn,
+.radio,
+label {
+  padding-right: 6px;
+}
+
 label.radio:before {
   content: "";
   position: absolute;
@@ -1178,7 +1192,7 @@ label.radio:before {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: 0.5px solid #8ebf42;
+  border: 0.5px solid #01345b;
   background: #fff;
 }
 label.radio:after {
@@ -1188,8 +1202,8 @@ label.radio:after {
   height: 4px;
   top: 5px;
   left: 4px;
-  border-bottom: 3px solid #8ebf42;
-  border-left: 3px solid #8ebf42;
+  border-bottom: 3px solid #01345b;
+  border-left: 3px solid #01345b;
   transform: rotate(-45deg);
   opacity: 0;
 }
@@ -1199,15 +1213,20 @@ input[type="radio"]:checked + label:after {
 textarea {
   width: 95%;
   margin: 20px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
 }
-.review-btn {
-  width: 100%;
+.review-form .review-btn {
+  width: 30%;
   padding: 8px;
   border-radius: 5px;
   border: none;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   color: #fff;
+}
+
+.review-btn:hover {
+  transform: scale(0.97);
 }
 /* button:hover {
   background: #82b534;

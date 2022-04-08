@@ -161,30 +161,30 @@ include './header.inc.php';
           </div>
           <div class="info-item">
             <label class="icon" for="phone"><i class="fas fa-book"></i></label>
-            <input type="text" name="rating" id="phone" placeholder="Book Name" required />
+            <input type="text" name="bookname" id="phone" placeholder="Book Name" required />
           </div>
         </div>
         <h3 class="review-sub">Rate your Book</h3>
         <div class="grade-type">
 
-          <div>
-            <input type="radio" value="none" id="radioOne" name="grade" checked />
+          <div class="radio-btn">
+            <input type="radio" value="Excellent" id="radioOne" name="grade" true />
             <label for="radioOne" class="radio">Excellent</label>
           </div>
-          <div>
-            <input type="radio" value="none" id="radioTwo" name="grade" />
+          <div class="radio-btn">
+            <input type="radio" value="Very Good" id="radioTwo" name="grade" />
             <label for="radioTwo" class="radio">Very Good</label>
           </div>
-          <div>
-            <input type="radio" value="none" id="radioThree" name="grade" />
+          <div class="radio-btn">
+            <input type="radio" value="Good" id="radioThree" name="grade" />
             <label for="radioThree" class="radio">Good</label>
           </div>
-          <div>
-            <input type="radio" value="none" id="radioFour" name="grade" />
+          <div class="radio-btn">
+            <input type="radio" value="Bad" id="radioFour" name="grade" />
             <label for="radioFour" class="radio">Bad</label>
           </div>
-          <div>
-            <input type="radio" value="none" id="radioFive" name="grade" />
+          <div class="radio-btn">
+            <input type="radio" value="Very Bad" id="radioFive" name="grade" />
             <label for="radioFive" class="radio">Very Bad</label>
           </div>
         </div>

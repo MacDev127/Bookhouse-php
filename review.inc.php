@@ -7,12 +7,13 @@ include_once './db.inc.php';
 $first = $_POST['first'];
 $last = $_POST['last'];
 $email = $_POST['email'];
-$rating = $_POST['rating'];
+$bookname = $_POST['bookname'];
+$grade = $_POST['grade'];
 $review = $_POST['review'];
 
 
 
-$sql = "INSERT INTO `review` ( `first_name`, `last_name`, `customer_email`, `rating`, `review`) VALUES ('$first', '$last', '$email', '$rating', '$review');";
+$sql = "INSERT INTO `review` ( `first_name`, `last_name`, `customer_email`, `bookname`, `grade`,`review`) VALUES ('$first', '$last', '$email', '$bookname', '$grade', '$review');";
 mysqli_query($conn, $sql);
 
 header("Location: ./review.php?review=success");
