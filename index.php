@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +60,7 @@ session_start();
       <div class="nav-links">
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="./review.php">Reviews</a></li>
         <li><a href="#">Contact</a></li>
 
         <?php

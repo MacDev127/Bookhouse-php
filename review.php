@@ -1,35 +1,7 @@
 <?php
 include_once './db.inc.php';
 include './header.inc.php';
-
-session_start();
-$status = "";
-if (isset($_POST['action']) && $_POST['action'] == "remove") {
-  if (!empty($_SESSION["shopping_cart"])) {
-    foreach ($_SESSION["shopping_cart"] as $key => $value) {
-      if ($_POST["code"] == $key) {
-        unset($_SESSION["shopping_cart"][$key]);
-        $status = "<div class='box' style='color:red;'>
-      Product is removed from your cart!</div>";
-      }
-      if (empty($_SESSION["shopping_cart"]))
-        unset($_SESSION["shopping_cart"]);
-    }
-  }
-}
-
-if (isset($_POST['action']) && $_POST['action'] == "change") {
-  foreach ($_SESSION["shopping_cart"] as &$value) {
-    if ($value['code'] === $_POST["code"]) {
-      $value['quantity'] = $_POST["quantity"];
-      break; // Stop the loop after we've found the product
-    }
-  }
-}
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -68,22 +40,22 @@ if (isset($_POST['action']) && $_POST['action'] == "change") {
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
     integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
 
-
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
 
   <!-- -------------Navigation------------------- -->
-  <!-- -------------Navigation------------------- -->
   <nav>
     <ul>
-      <li class="logo"><a href="./index.html">BookHouse</a></li>
+      <li class="logo"><a href="./index.php">BookHouse</a></li>
       <li class="li-btn"><span class="fas fa-bars"></span></li>
       <div class="nav-links">
-        <li><a href="#">Home</a></li>
+        <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#">Login</a></li>
 
 
 
@@ -145,118 +117,86 @@ if (isset($_POST['action']) && $_POST['action'] == "change") {
 
   </nav>
   <!-- ------------------Navigation End------------ -->
+  <!-- <section class="review">
+   
 
-  <!-- Cart Items Details -->
+    <form class="review-form" action="./signup.inc.php" method="POST">
 
-  <!-- <div class="small-container cart-page">
-    <table>
-      <tr>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Sub-Total</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="cart-info">
-            <img src="./images/b2.png" alt="">
-            <div>
-              <p>Deathly Hallows</p>
-              <small>Price: £20.00</small>
-              <br>
-              <a href="">Remove</a>
+      <input type="text" name="first" placeholder="First-Name">
+      <br>
+      <input type="text" name="last" placeholder="Last-Name">
+      <br>
+      <input type="text" name="email" placeholder="email">
+      <br>
+      <input type="text" name="rating" placeholder="Rating out of 10">
+      <br>
+      <input type="text" name="review" placeholder="review">
+      <br>
+      <input type="date" name="date" placeholder="date">
+      <br>
+      <button type="submit" name="submit">Place Review</button>
+    </form>
+  </section> -->
 
-            </div>
+
+  <!-- Test -->
+
+  <section class="review">
+    <h1 class="review-title">Leave a Review</h1>
+    <div class="main-block">
+
+      <form class="review-form" action="./review.inc.php" method="POST">
+        <div class="info">
+          <div class="info-item">
+            <label class="icon" for="name"><i class="fas fa-user"></i></label>
+            <input type="text" name="first" id="name" placeholder="First Name" />
           </div>
-        </td>
-        <td><input type="number" value="1"></td>
-        <td>£10.00</td>
-      </tr>
-    </table>
-  </div> -->
+          <div class="info-item">
+            <label class="icon" for="name"><i class="fas fa-user"></i></label>
+            <input type="text" name="last" id="name" placeholder="Last Name" />
+          </div>
+          <div class="info-item">
+            <label class="icon" for="email"><i class="fas fa-envelope"></i></label>
+            <input type="text" name="email" id="email" placeholder="Email" />
+          </div>
+          <div class="info-item">
+            <label class="icon" for="phone"><i class="fas fa-book"></i></label>
+            <input type="text" name="rating" id="phone" placeholder="Book Name" required />
+          </div>
+        </div>
+        <h3 class="review-sub">Rate your Book</h3>
+        <div class="grade-type">
 
-  <!-- Php Test Section -->
+          <div>
+            <input type="radio" value="none" id="radioOne" name="grade" checked />
+            <label for="radioOne" class="radio">Excellent</label>
+          </div>
+          <div>
+            <input type="radio" value="none" id="radioTwo" name="grade" />
+            <label for="radioTwo" class="radio">Very Good</label>
+          </div>
+          <div>
+            <input type="radio" value="none" id="radioThree" name="grade" />
+            <label for="radioThree" class="radio">Good</label>
+          </div>
+          <div>
+            <input type="radio" value="none" id="radioFour" name="grade" />
+            <label for="radioFour" class="radio">Bad</label>
+          </div>
+          <div>
+            <input type="radio" value="none" id="radioFive" name="grade" />
+            <label for="radioFive" class="radio">Very Bad</label>
+          </div>
+        </div>
+        <!-- <h3>Please Comment on Your Rating</h3> -->
+        <textarea rows="6" name="review" placeholder="Please leave a review"></textarea>
+        <button class="review-btn" type="submit" name="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  <!-- Test End -->
 
-
-
-
-
-
-
-  <div class="cart">
-    <?php
-    if (isset($_SESSION["shopping_cart"])) {
-      $total_price = 0;
-    ?>
-    <table class="table">
-      <tbody>
-        <tr>
-          <td></td>
-          <td>ITEM NAME</td>
-          <td>QUANTITY</td>
-          <td>UNIT PRICE</td>
-          <td>ITEMS TOTAL</td>
-        </tr>
-        <?php
-          foreach ($_SESSION["shopping_cart"] as $product) {
-          ?>
-        <tr>
-          <td>
-            <img src='<?php echo $product["image"]; ?>' width="50" height="40" />
-          </td>
-          <td><?php echo $product["name"]; ?><br />
-            <form method='post' action=''>
-              <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
-              <input type='hidden' name='action' value="remove" />
-              <button type='submit' class='remove'>Remove Item</button>
-            </form>
-          </td>
-          <td>
-            <form method='post' action=''>
-              <input type='hidden' name='code' value="<?php echo $product["code"]; ?>" />
-              <input type='hidden' name='action' value="change" />
-              <select name='quantity' class='quantity' onChange="this.form.submit()">
-                <option <?php if ($product["quantity"] == 1) echo "selected"; ?> value="1">1</option>
-                <option <?php if ($product["quantity"] == 2) echo "selected"; ?> value="2">2</option>
-                <option <?php if ($product["quantity"] == 3) echo "selected"; ?> value="3">3</option>
-                <option <?php if ($product["quantity"] == 4) echo "selected"; ?> value="4">4</option>
-                <option <?php if ($product["quantity"] == 5) echo "selected"; ?> value="5">5</option>
-              </select>
-            </form>
-          </td>
-          <td><?php echo "$" . $product["price"]; ?></td>
-          <td><?php echo "$" . $product["price"] * $product["quantity"]; ?></td>
-        </tr>
-        <?php
-            $total_price += ($product["price"] * $product["quantity"]);
-          }
-          ?>
-        <tr>
-          <td colspan="5" align="right">
-            <strong>TOTAL: <?php echo "$" . $total_price; ?></strong>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <?php
-    } else {
-      echo "<h3>Your cart is empty!</h3>";
-    }
-    ?>
-  </div>
-
-  <div style="clear:both;"></div>
-
-  <div class="message_box" style="margin:10px 0px;">
-    <?php echo $status; ?>
-  </div>
-
-
-
-  <!-- Php Test Section -->
-
-
-
-
+  <!-- Sign Up Form -->
 
   <!---------------------------- Footer------------------- -->
 
@@ -321,9 +261,9 @@ if (isset($_POST['action']) && $_POST['action'] == "change") {
 
 
       <!-- <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li> -->
+      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-youtube"></i></a></li> -->
 
       <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
@@ -335,8 +275,6 @@ if (isset($_POST['action']) && $_POST['action'] == "change") {
     <p class="copy">&copy; BookHouse | All rights Reserved 2022</p>
 
   </footer>
-
-
 
 
 
