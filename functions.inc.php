@@ -59,7 +59,7 @@ function uidExists($conn, $username)
     exit();
   }
 
-  mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+  mysqli_stmt_bind_param($stmt, "ss", $username, $username);
   mysqli_stmt_execute($stmt);
 
   // "Get result" returns the results from a prepared statement
@@ -98,6 +98,9 @@ function createUser($conn, $first, $last, $email, $username, $pwd)
   exit();
 }
 
+
+
+
 function createReview($conn, $first, $last, $email, $bookname, $grade, $review)
 {
   $sql = "INSERT INTO review (first_name, last_name, customer_email, bookname, grade, review) VALUES (?, ?, ?, ?, ?, ?);";
@@ -131,16 +134,15 @@ function emptyInputLogin($username, $pwd)
   return $result;
 }
 
-//Check for empty review input
 
 
 // Log user into website
 function loginUser($conn, $username, $pwd)
 {
-  $uidExists = uidExists($conn, $username, $pwd);
+  $uidExists = uidExists($conn, $username);
 
   if ($uidExists === false) {
-    header("location: ./login.php?error=wronglogin");
+    header("location: ./index.php?success=loggedin");
     exit();
   }
 
@@ -148,12 +150,12 @@ function loginUser($conn, $username, $pwd)
   $checkPwd = password_verify($pwd, $pwdHashed);
 
   if ($checkPwd === false) {
-    header("location: ./login.php?error=wronglogin");
+    header("location: ./index.php?success=loggedin");
     exit();
   } elseif ($checkPwd === true) {
     session_start();
-    $_SESSION["userid"] = $uidExists["users_id"];
-    $_SESSION["useruid"] = $uidExists["users_uid"];
+    $_SESSION["user_id"] = $uidExists["user_id"];
+    $_SESSION["user_uid"] = $uidExists["user_uid"];
     header("location: ./index.php?success=loggedin");
     exit();
   }

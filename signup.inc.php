@@ -38,12 +38,8 @@ if (isset($_POST["submit"])) {
     exit();
   }
   // Is the username taken already
-  if (uidExists($conn, $username) !== false) {
+  if (uidExists($conn, $username, $email) !== false) {
     header("location: ./signup-page.php?error=usernametaken");
-    exit();
-  }
-  if (uidExists($conn, $email) !== false) {
-    header("location: ./signup-page.php?error=emailtaken");
     exit();
   }
 

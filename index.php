@@ -63,16 +63,7 @@ session_start();
         <li><a href="./review.php">Reviews</a></li>
         <li><a href="#">Contact</a></li>
 
-        <?php
-        // if (isset($_SESSION["userid"])) {
-        //   echo "<li><a href='profile.php'>Profile Page<a/></li>";
-        //   echo "<li><a href='logout.php'>Log out<a/></li>";
-        // } else {
-        //   echo "<li><a href='profile.php'>Profile Page<a/></li>";
-        //   echo "<li><a href='logout.php'>Log out<a/></li>";
-        // }
 
-        ?>
         <li><a href="#">Login</a></li>
 
 
@@ -84,7 +75,7 @@ session_start();
         <li class="search-icon">
           <input type="search" placeholder="Search">
 
-          <label class="icon">
+          <label class="s-icon">
 
             <span class="fas fa-search"></span>
 
@@ -128,7 +119,6 @@ session_start();
 
             </div>
           </ul>
-          <!-- <span class="cart"><i class="fas fa-shopping-cart"></i></span> -->
 
         </li>
 
@@ -167,7 +157,7 @@ session_start();
           And since the inception of her career, J K Rowling has won multiple awards and has sold over 500 million
           copies of her books, thus cementing her status as the first world’s billionaire author. </p>
         <div class="banner-button">
-          <a href="#" class="banner-btn">Shop Now</a>
+          <button class="banner-btn">Shop Now</button>
         </div>
       </div>
 
@@ -786,6 +776,42 @@ session_start();
   
     </div> -->
   <!-- ----------For all products page---------------------------------------- -->
+
+
+
+
+  <section class="testimonials">
+
+    <div class="title">
+      Readers Reviews
+    </div>
+
+    <div class="test-container">
+
+      <div class="test-box">
+
+        <div class="box-top">
+
+          <div class="profile">
+            <div class="profile-img">
+
+              <img src="">
+            </div>
+
+            <div class="name-user">
+
+            </div>
+
+
+          </div>
+          <div class="test-review"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
 
   <!---------------------------- Footer------------------- -->
 

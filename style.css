@@ -131,7 +131,7 @@ nav ul {
   height: 40px;
   width: 240px;
   display: flex;
-  background: #000;
+  background: #01345b;
   border-radius: 5px;
 }
 
@@ -146,7 +146,7 @@ nav ul {
   border-radius: 5px 0 0 5px;
 }
 
-.search-icon .icon {
+.search-icon .s-icon {
   height: 100%;
   width: 40px;
   line-height: 40px;
@@ -157,13 +157,13 @@ nav ul {
   transition: all 0.2s ease-in;
 }
 
-.search-icon .icon:hover {
-  background: #5ce0d8;
+.s-icon span {
+  color: #fff;
+  font-size: 18px;
 }
 
-.icon span {
-  color: #fdfffc;
-  font-size: 18px;
+.s-icon:hover {
+  transform: scale(0.96);
 }
 
 .li-btn {
@@ -1080,21 +1080,8 @@ button[type="submit"] {
 .error-msg {
   background-color: #fff;
 }
-/* success page end */
 
-/* Review page */
-/* .review {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #01345b;
-}
-
-.review-form {
-  border: 1ps solid #000;
-} */
-
-/* Test     */
+/* Review Page */
 
 .review {
   display: flex;
@@ -1254,11 +1241,9 @@ textarea {
   }
 }
 
-/* test end */
-
 /* Review page end */
 
-/* ---------Shopping cart page test--------------- */
+/* ---------Shopping cart page --------------- */
 
 .container .shopping-cart {
   padding: 20px 0;
@@ -1328,7 +1313,18 @@ textarea {
   }
 }
 
-/* -------------Shopping cart page test end ----------*/
+/* -------------Shopping cart page end ----------*/
+
+/* Testimonials section */
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Testimonials Section end  */
 
 /* -----------------------Footer --------------------------------------*/
 footer {
