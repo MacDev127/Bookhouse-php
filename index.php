@@ -64,7 +64,7 @@ session_start();
         <li><a href="#">Contact</a></li>
 
 
-        <li><a href="#">Login</a></li>
+        <li><a href="./login.php">Login</a></li>
 
 
 
@@ -89,14 +89,7 @@ session_start();
               <h1>Login</h1>
 
 
-              <!-- <form class="login-form" action="./login.inc.php" method="post">
-                <label>Email</label>
-                <input type="text" name="uid" placeholder="Username or Email">
-                <label>Password</label>
-                <input type="password" name="pwd" placeholder="Password">
-                <a href="./index.php">
-                  <input class="login-btn" type="submit" name="submit"></input>
-              </form> -->
+
               <form method="post">
                 <div class="txt_field">
                   <input type="text" required>
@@ -362,6 +355,8 @@ session_start();
   <section class="latest">
 
     <h1 class="title"> New Releases</h1>
+    <h3 class="sub-title">The Harry Potter E-Book Series</h3>
+
 
 
     <div class="swiper featured-slider">
@@ -562,7 +557,7 @@ session_start();
             <img src="./images/b1.png" alt="">
           </div>
           <div class="content">
-            <h3>featured books</h3>
+            <h4 class="book-title">The Philosophers Stone</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -581,26 +576,7 @@ session_start();
             <img src="./images/b2.png" alt="">
           </div>
           <div class="content">
-            <h3>featured books</h3>
-            <div class="stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-
-              <p>£8.00</p>
-            </div>
-            <button id="btn-add">Add to Cart<i class="fa-solid fa-cart-shopping"></i></button>
-          </div>
-        </div>
-
-        <div class="swiper-slide box">
-
-          <div class="image">
-            <img src="./images/b3.png" alt="">
-          </div>
-          <div class="content">
-            <h3>featured books</h3>
+            <h4 class="book-title">The Deathly Hallows</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -619,7 +595,7 @@ session_start();
             <img src="./images/b4.png" alt="">
           </div>
           <div class="content">
-            <h3>featured books</h3>
+            <h4 class="book-title">The Chamber of Secrets</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -638,7 +614,7 @@ session_start();
             <img src="./images/b5.png" alt="">
           </div>
           <div class="content">
-            <h3>featured books</h3>
+            <h4 class="book-title">The Goblet of Fire</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -657,7 +633,7 @@ session_start();
             <img src="./images/b6.png" alt="">
           </div>
           <div class="content">
-            <h3>featured books</h3>
+            <h4 class="book-title">The Half Blood Prince</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -676,7 +652,7 @@ session_start();
             <img src="./images/b7.png" alt="">
           </div>
           <div class="content">
-            <h3>featured books</h3>
+            <h4 class="book-title">The Prisoner of Azkaban</h4>
             <div class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -702,80 +678,10 @@ session_start();
     </div>
 
   </section>
-  <!---------------------------------------- Best sellers section----------------- -->
+  <!---------------------------------------- Best sellers section end ----------------- -->
 
 
 
-  <!-- For all products page -->
-
-
-  <!-- <div class="container">
-    <h2 class="title">Latest Collection</h2>
-    <h4 class="sub-title">The Wizarding World</h4>
-    <div class="row-area">
-      <div class="col-4">
-        <img src="./images/b4.png" alt="">
-
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <p>£30.00</p>
-          <a href="#" class="btn">Add to Cart<i class="fa-solid fa-cart-shopping" id="btn-cart"></i></a>
-        </div>
-      </div>
-      <div class="col-4">
-        <img src="./images/b2.png" alt="">
-
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <p>£40.00</p>
-          <a href="#" class="btn">Add to Cart<i class="fa-solid fa-cart-shopping" id="btn-cart"></i></a>
-        </div>
-      </div>
-      <div class="col-4">
-        <img src="./images/b5.png" alt="">
-
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <p>£20.00</p>
-          <a href="#" class="btn">Add to Cart<i class="fa-solid fa-cart-shopping" id="btn-cart"></i></a>
-        </div>
-      </div>
-      <div class="col-4">
-        <img src="./images/b3.png" alt="">
-
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <p>£30.00</p>
-          <a href="#" class="btn">Add to Cart<i class="fa-solid fa-cart-shopping" id="btn-cart"></i></a>
-        </div>
-      </div>
-      <div class="col-4">
-        <img src="./images/b7.png" alt="">
-
-        <div class="rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star-half-stroke"></i>
-          <p>£30.00</p>
-          <a href="#" class="btn">Add to Cart<i class="fa-solid fa-cart-shopping" id="btn-cart"></i></a>
-        </div>
-      </div>
-  
-    </div> -->
-  <!-- ----------For all products page---------------------------------------- -->
 
 
 
@@ -795,19 +701,143 @@ session_start();
           <div class="profile">
             <div class="profile-img">
 
-              <img src="">
+              <img src="./images/test-3.jpg">
             </div>
 
             <div class="name-user">
-
+              <strong class="test-name">James Ward</strong>
+              <span>@jward</span>
             </div>
 
 
           </div>
-          <div class="test-review"></div>
+          <div class="test-review">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+
+        <div class="user-comments">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+
+          </p>
+        </div>
+      </div>
+      <div class="test-box">
+
+        <div class="box-top">
+
+          <div class="profile">
+            <div class="profile-img">
+
+              <img src="./images/test-4.jpg">
+            </div>
+
+            <div class="name-user">
+              <strong class="test-name">Sarah Doyle</strong>
+              <span>@s_dolye</span>
+            </div>
+
+
+          </div>
+          <div class="test-review">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+
+        <div class="user-comments">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+
+          </p>
+        </div>
+      </div>
+      <div class="test-box">
+
+        <div class="box-top">
+
+          <div class="profile">
+            <div class="profile-img">
+
+              <img src="./images/test-5.jpg">
+            </div>
+
+            <div class="name-user">
+              <strong class="test-name">Jane Sims</strong>
+              <span>@j_simmy</span>
+            </div>
+
+
+          </div>
+          <div class="test-review">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+
+        <div class="user-comments">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+
+          </p>
+        </div>
+      </div>
+      <div class="test-box">
+
+        <div class="box-top">
+
+          <div class="profile">
+            <div class="profile-img">
+
+              <img src="./images/test-6.jpg">
+            </div>
+
+            <div class="name-user">
+              <strong class="test-name">Paddy Doherty</strong>
+              <span>@pdorts</span>
+            </div>
+
+
+          </div>
+          <div class="test-review">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </div>
+
+        <div class="user-comments">
+          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+            Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+            Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.
+
+          </p>
         </div>
       </div>
 
+    </div>
+
+    <div class="test-button">
+      <div class="test-btn">
+        <a href="./review.php" id="test-btn">Leave a Review</a>
+
+      </div>
     </div>
 
   </section>
@@ -815,7 +845,7 @@ session_start();
 
   <!---------------------------- Footer------------------- -->
 
-  <hr>
+
 
   <footer>
     <div class="footer-wrapper">

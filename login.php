@@ -54,9 +54,11 @@ include './header.inc.php';
       <div class="nav-links">
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="./review.php">Reviews</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
+
+
+        <li><a href="./login.php">Login</a></li>
 
 
 
@@ -67,7 +69,7 @@ include './header.inc.php';
         <li class="search-icon">
           <input type="search" placeholder="Search">
 
-          <label class="icon">
+          <label class="s-icon">
 
             <span class="fas fa-search"></span>
 
@@ -79,6 +81,16 @@ include './header.inc.php';
           <ul class="nav-drop-menu">
             <div class="center">
               <h1>Login</h1>
+
+
+              <!-- <form class="login-form" action="./login.inc.php" method="post">
+                <label>Email</label>
+                <input type="text" name="uid" placeholder="Username or Email">
+                <label>Password</label>
+                <input type="password" name="pwd" placeholder="Password">
+                <a href="./index.php">
+                  <input class="login-btn" type="submit" name="submit"></input>
+              </form> -->
               <form method="post">
                 <div class="txt_field">
                   <input type="text" required>
@@ -93,12 +105,14 @@ include './header.inc.php';
                 <div class="pass">Forgot Password?</div>
                 <input type="submit" value="Login">
                 <div class="signup_link">
-                  Not a member? <a href="./register.html">Signup</a>
+                  Not a member? <a href="./signup-page.php">Signup</a>
                 </div>
               </form>
+
+
+
             </div>
           </ul>
-          <!-- <span class="cart"><i class="fas fa-shopping-cart"></i></span> -->
 
         </li>
 
@@ -119,35 +133,10 @@ include './header.inc.php';
   </nav>
   <!-- ------------------Navigation End------------ -->
 
-  <!-- Signup Form -->
+  <!-- Login Form -->
 
 
   <section class="login">
-    <!-- <div class="signup-box">
-      <h1 class="signup-title">Sign Up</h1>
-      <h4 class="signup-sub">Its Free and only takes a minute!</h4>
-      <form class="su-form" action="signup.inc.php" method="POST">
-        <label>First Name</label>
-        <input type="text" name="first" placeholder="">
-        <label>Last Name</label>
-        <input type="text" name="last" placeholder="">
-        <label>Email</label>
-        <input type="email" name="email" placeholder="">
-        <label>Username</label>
-        <input type="text" name="uid" placeholder="">
-        <label>Password</label>
-        <input type="password" name="pwd" placeholder="">
-        <a href="./index.php">
-          <input type="submit" name="submit" value="Submit"></a>
-
-
-      </form>
-      <p>By clicking the signup button you agree to our terms and conditions.</p>
-      <a href="#">Terms & Conditions</a>
-    </div>
-    <p class="para-2">Already have an account? <a class="para-2-link" href="#">Login Here</a></p> -->
-
-
     <div class="login-box">
       <h1 class="signup-title">Login</h1>
       <form class="login-form" action="./login.inc.php" method="post">
@@ -174,11 +163,10 @@ include './header.inc.php';
     ?>
   </section>
 
-  <!-- Sign Up Form -->
 
   <!---------------------------- Footer------------------- -->
 
-  <hr>
+
 
   <footer>
     <div class="footer-wrapper">
@@ -238,10 +226,7 @@ include './header.inc.php';
     <div class="socials">
 
 
-      <!-- <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-youtube"></i></a></li> -->
+
 
       <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>

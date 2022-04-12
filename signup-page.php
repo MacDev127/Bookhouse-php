@@ -54,9 +54,11 @@ include './functions.inc.php';
       <div class="nav-links">
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="./review.php">Reviews</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
+
+
+        <li><a href="./login.php">Login</a></li>
 
 
 
@@ -67,7 +69,7 @@ include './functions.inc.php';
         <li class="search-icon">
           <input type="search" placeholder="Search">
 
-          <label class="icon">
+          <label class="s-icon">
 
             <span class="fas fa-search"></span>
 
@@ -79,6 +81,16 @@ include './functions.inc.php';
           <ul class="nav-drop-menu">
             <div class="center">
               <h1>Login</h1>
+
+
+              <!-- <form class="login-form" action="./login.inc.php" method="post">
+                <label>Email</label>
+                <input type="text" name="uid" placeholder="Username or Email">
+                <label>Password</label>
+                <input type="password" name="pwd" placeholder="Password">
+                <a href="./index.php">
+                  <input class="login-btn" type="submit" name="submit"></input>
+              </form> -->
               <form method="post">
                 <div class="txt_field">
                   <input type="text" required>
@@ -93,12 +105,14 @@ include './functions.inc.php';
                 <div class="pass">Forgot Password?</div>
                 <input type="submit" value="Login">
                 <div class="signup_link">
-                  Not a member? <a href="./register.html">Signup</a>
+                  Not a member? <a href="./signup-page.php">Signup</a>
                 </div>
               </form>
+
+
+
             </div>
           </ul>
-          <!-- <span class="cart"><i class="fas fa-shopping-cart"></i></span> -->
 
         </li>
 

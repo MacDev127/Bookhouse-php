@@ -53,9 +53,11 @@ include './header.inc.php';
       <div class="nav-links">
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
+        <li><a href="./review.php">Reviews</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
+
+
+        <li><a href="./login.php">Login</a></li>
 
 
 
@@ -66,7 +68,7 @@ include './header.inc.php';
         <li class="search-icon">
           <input type="search" placeholder="Search">
 
-          <label class="icon">
+          <label class="s-icon">
 
             <span class="fas fa-search"></span>
 
@@ -78,6 +80,16 @@ include './header.inc.php';
           <ul class="nav-drop-menu">
             <div class="center">
               <h1>Login</h1>
+
+
+              <!-- <form class="login-form" action="./login.inc.php" method="post">
+                <label>Email</label>
+                <input type="text" name="uid" placeholder="Username or Email">
+                <label>Password</label>
+                <input type="password" name="pwd" placeholder="Password">
+                <a href="./index.php">
+                  <input class="login-btn" type="submit" name="submit"></input>
+              </form> -->
               <form method="post">
                 <div class="txt_field">
                   <input type="text" required>
@@ -92,12 +104,14 @@ include './header.inc.php';
                 <div class="pass">Forgot Password?</div>
                 <input type="submit" value="Login">
                 <div class="signup_link">
-                  Not a member? <a href="./register.html">Signup</a>
+                  Not a member? <a href="./signup-page.php">Signup</a>
                 </div>
               </form>
+
+
+
             </div>
           </ul>
-          <!-- <span class="cart"><i class="fas fa-shopping-cart"></i></span> -->
 
         </li>
 
@@ -117,29 +131,9 @@ include './header.inc.php';
 
   </nav>
   <!-- ------------------Navigation End------------ -->
-  <!-- <section class="review">
-   
-
-    <form class="review-form" action="./signup.inc.php" method="POST">
-
-      <input type="text" name="first" placeholder="First-Name">
-      <br>
-      <input type="text" name="last" placeholder="Last-Name">
-      <br>
-      <input type="text" name="email" placeholder="email">
-      <br>
-      <input type="text" name="rating" placeholder="Rating out of 10">
-      <br>
-      <input type="text" name="review" placeholder="review">
-      <br>
-      <input type="date" name="date" placeholder="date">
-      <br>
-      <button type="submit" name="submit">Place Review</button>
-    </form>
-  </section> -->
 
 
-  <!-- Test -->
+  <!-- ----------Review-Section ---------------------->
 
   <section class="review">
     <h1 class="review-title">Leave a Review</h1>
@@ -188,20 +182,19 @@ include './header.inc.php';
             <label for="radioFive" class="radio">Very Bad</label>
           </div>
         </div>
-        <!-- <h3>Please Comment on Your Rating</h3> -->
         <textarea rows="6" name="review" placeholder="Please leave a review"></textarea>
         <button class="review-btn" type="submit" name="submit">Submit</button>
       </form>
 
     </div>
   </section>
-  <!-- Test End -->
+  <!-- --------------Review section  End ------------------------>
 
-  <!-- Sign Up Form -->
+
 
   <!---------------------------- Footer------------------- -->
 
-  <hr>
+
 
   <footer>
     <div class="footer-wrapper">
@@ -261,10 +254,7 @@ include './header.inc.php';
     <div class="socials">
 
 
-      <!-- <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-youtube"></i></a></li> -->
+
 
       <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>

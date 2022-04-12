@@ -5,7 +5,6 @@ include './header.inc.php';
 ?>
 
 
-<!-- Signup Form -->
 
 
 <section class="result">
@@ -21,11 +20,9 @@ include './header.inc.php';
 
 </section>
 
-<!-- Sign Up Form -->
 
-<!---------------------------- Footer------------------- -->
 
-<hr>
+
 
 
 </body>
