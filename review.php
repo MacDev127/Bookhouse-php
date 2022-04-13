@@ -16,20 +16,16 @@ include './header.inc.php';
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
   <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +33,7 @@ include './header.inc.php';
 
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
-    integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
 
   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
@@ -54,7 +49,7 @@ include './header.inc.php';
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="./review.php">Reviews</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./">Cart</a></li>
 
 
         <li><a href="./login.php">Login</a></li>
@@ -82,14 +77,7 @@ include './header.inc.php';
               <h1>Login</h1>
 
 
-              <!-- <form class="login-form" action="./login.inc.php" method="post">
-                <label>Email</label>
-                <input type="text" name="uid" placeholder="Username or Email">
-                <label>Password</label>
-                <input type="password" name="pwd" placeholder="Password">
-                <a href="./index.php">
-                  <input class="login-btn" type="submit" name="submit"></input>
-              </form> -->
+
               <form method="post">
                 <div class="txt_field">
                   <input type="text" required>
@@ -117,7 +105,7 @@ include './header.inc.php';
 
         <div class='cart-wrapper'>
           <div class="cart">
-            <i class="fas fa-shopping-cart"></i>
+            <a href="./cart.php"> <i class="fas fa-shopping-cart"></i></a>
           </div>
           <div class="cart-badge"><span id="cart-count">0</span></div>
           <div class="box" id="box">
@@ -272,10 +260,10 @@ include './header.inc.php';
 
   <!-------------------------- Scripts------------------- -->
   <script>
-  $('.li-btn span').click(function() {
-    $('.nav-links').toggleClass("show");
-    $('li.btn span').toggleClass("show");
-  });
+    $('.li-btn span').click(function() {
+      $('.nav-links').toggleClass("show");
+      $('li.btn span').toggleClass("show");
+    });
   </script>
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

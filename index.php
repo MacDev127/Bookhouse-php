@@ -61,7 +61,7 @@ session_start();
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="./review.php">Reviews</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./">Cart</a></li>
 
 
         <li><a href="./login.php">Login</a></li>
@@ -117,7 +117,7 @@ session_start();
 
         <div class='cart-wrapper'>
           <div class="cart">
-            <i class="fas fa-shopping-cart"></i>
+            <a href="./cart.php"> <i class="fas fa-shopping-cart"></i></a>
           </div>
           <div class="cart-badge"><span id="cart-count">0</span></div>
           <div class="box" id="box">

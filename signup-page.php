@@ -55,7 +55,7 @@ include './functions.inc.php';
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="./review.php">Reviews</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./">Cart</a></li>
 
 
         <li><a href="./login.php">Login</a></li>
@@ -83,14 +83,7 @@ include './functions.inc.php';
               <h1>Login</h1>
 
 
-              <!-- <form class="login-form" action="./login.inc.php" method="post">
-                <label>Email</label>
-                <input type="text" name="uid" placeholder="Username or Email">
-                <label>Password</label>
-                <input type="password" name="pwd" placeholder="Password">
-                <a href="./index.php">
-                  <input class="login-btn" type="submit" name="submit"></input>
-              </form> -->
+
               <form method="post">
                 <div class="txt_field">
                   <input type="text" required>
@@ -118,7 +111,7 @@ include './functions.inc.php';
 
         <div class='cart-wrapper'>
           <div class="cart">
-            <i class="fas fa-shopping-cart"></i>
+            <a href="./cart.php"> <i class="fas fa-shopping-cart"></i></a>
           </div>
           <div class="cart-badge"><span id="cart-count">0</span></div>
           <div class="box" id="box">
