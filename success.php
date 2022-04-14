@@ -11,7 +11,7 @@ include './header.inc.php';
 
   <div class="result-box">
 
-    <h1>Thank you for your review!!</h1>
+    <h1 class="success-text">Thank you for your review!!</h1>
     <a class="result-link" href="./index.php">Back to Homepage</a>
 
   </div>

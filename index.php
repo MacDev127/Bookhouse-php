@@ -61,7 +61,7 @@ session_start();
         <li><a href="./index.php">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="./review.php">Reviews</a></li>
-        <li><a href="./">Cart</a></li>
+        <li><a href="./cart.php">Cart</a></li>
 
 
         <li><a href="./login.php">Login</a></li>
@@ -905,10 +905,7 @@ session_start();
     <div class="socials">
 
 
-      <!-- <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-youtube"></i></a></li> -->
+
 
       <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>

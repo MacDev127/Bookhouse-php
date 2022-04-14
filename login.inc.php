@@ -6,8 +6,8 @@ if (isset($_POST["submit"])) {
   $username = $_POST["uid"];
   $pwd = $_POST["pwd"];
 
-  // Then we run a bunch of error handlers to catch any user mistakes we can (you can add more than I did)
-  // These functions can be found in functions.inc.php
+  // We then run error handlers to catch any user mistakes
+
 
   require_once 'db.inc.php';
   require_once 'functions.inc.php';

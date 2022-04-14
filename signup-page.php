@@ -17,20 +17,16 @@ include './functions.inc.php';
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
   <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,8 +34,7 @@ include './functions.inc.php';
 
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
-    integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
 
   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
@@ -250,10 +245,7 @@ include './functions.inc.php';
     <div class="socials">
 
 
-      <!-- <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-      <li><a href=""><i class="fa-brands fa-youtube"></i></a></li> -->
+
 
       <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
       <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
@@ -271,10 +263,10 @@ include './functions.inc.php';
 
   <!-------------------------- Scripts------------------- -->
   <script>
-  $('.li-btn span').click(function() {
-    $('.nav-links').toggleClass("show");
-    $('li.btn span').toggleClass("show");
-  });
+    $('.li-btn span').click(function() {
+      $('.nav-links').toggleClass("show");
+      $('li.btn span').toggleClass("show");
+    });
   </script>
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

@@ -84,13 +84,6 @@ nav ul {
   justify-content: center;
 }
 
-/* .nav-icons .cart .fas {
-  font-size: 20px;
-  margin: 20px 28px;
-  padding-left: 20px;
-  color: #01345b;
-} */
-
 /* ------------Cart Animation------------- */
 .cart-wrapper {
   position: relative;
@@ -367,19 +360,8 @@ nav ul li.li-btn span.show:before {
     flex: 4;
   }
 }
-/* @media screen and (max-width: 874px) {
-  .logo {
-    display: none;
-  }
-} */
-@media screen and (max-width: 820px) {
-  /* .logo {
-    position: relative;
-    display: flex;
-    z-index: 1;
-    font-size: 30px;
-  } */
 
+@media screen and (max-width: 820px) {
   .logo {
     display: none;
   }
@@ -392,10 +374,6 @@ nav ul li.li-btn span.show:before {
     z-index: 1;
     padding: 26px;
   }
-
-  /* .logo {
-    display: none;
-  } */
 
   .nav-links {
     z-index: 1;
@@ -989,9 +967,9 @@ button[type="submit"] {
   color: #fff;
 }
 
-/* Login page end */
+/* ----------------------------------------Login page end -------------------------*/
 
-/* success page */
+/* ----------------------success page----------------------------------- */
 
 .result {
   display: flex;
@@ -1010,8 +988,13 @@ button[type="submit"] {
   align-items: center;
   flex-direction: column;
   margin: auto;
+
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   border-radius: 10px;
+}
+
+.success-text {
+  color: #fff;
 }
 
 .result-box h1 {
@@ -1195,7 +1178,7 @@ textarea {
   }
 }
 
-/* Review page end */
+/*-------------------------------- Review page end ----------------------*/
 
 /* ---------Shopping cart page --------------- */
 
@@ -1483,7 +1466,7 @@ td a {
 
 /* -------------Shopping cart page end ----------*/
 
-/* Testimonials section */
+/* ----------------------------------Testimonials section----------------------- */
 
 .testimonials {
   display: flex;
@@ -1592,7 +1575,7 @@ td a {
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.09);
 }
 
-/* Testimonials Section end  */
+/* -------------------------Testimonials Section end  ------------------------*/
 
 /* -----------------------Footer --------------------------------------*/
 footer {
@@ -1794,5 +1777,12 @@ footer {
   .service-offer {
     flex-direction: column;
     padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .service-offer,
+  .delivery {
+    display: none;
   }
 }

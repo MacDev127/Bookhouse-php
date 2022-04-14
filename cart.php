@@ -54,10 +54,12 @@ if (isset($_GET['delete_all'])) {
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous">
 
   <!-- custom css file link  -->
   <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
@@ -168,17 +170,18 @@ if (isset($_GET['delete_all'])) {
         if (mysqli_num_rows($select_product) > 0) {
           while ($fetch_product = mysqli_fetch_assoc($select_product)) {
         ?>
-            <form method="post" class="cart-box" action="">
-              <img src="images/<?php echo $fetch_product['image']; ?>" alt="">
-              <div class="name"><?php echo $fetch_product['name']; ?></div>
-              <div class="price">£<?php echo $fetch_product['price']; ?></div>
-              <input type="number" min="1" name="product_quantity" value="1">
-              <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
-              <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
-              <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
+        <form method="post" class="cart-box" action="">
+          <img src="images/<?php echo $fetch_product['image']; ?>" alt="">
+          <div class="name"><?php echo $fetch_product['name']; ?></div>
+          <div class="price">£<?php echo $fetch_product['price']; ?></div>
+          <input type="number" min="1" name="product_quantity" value="1">
+          <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
+          <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
+          <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
 
-              <button class="cart-btn" type="submit" name="add_to_cart" value="add to cart">Add to Cart<span> <i class="fa-solid fa-cart-shopping"></i></span></button>
-            </form>
+          <button class="cart-btn" type="submit" name="add_to_cart" value="add to cart">Add to Cart<span> <i
+                class="fa-solid fa-cart-shopping"></i></span></button>
+        </form>
         <?php
           };
         };
@@ -208,21 +211,23 @@ if (isset($_GET['delete_all'])) {
           if (mysqli_num_rows($cart_query) > 0) {
             while ($fetch_cart = mysqli_fetch_assoc($cart_query)) {
           ?>
-              <tr>
-                <td><img src="images/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
-                <td><?php echo $fetch_cart['name']; ?></td>
-                <td>$<?php echo $fetch_cart['price']; ?></td>
-                <td>
-                  <form action="" method="post">
-                    <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
-                    <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
-                    <!-- <input type="submit" name="update_cart" value="update" class="option-btn"> -->
-                    <button class="option-btn" type="submit" name="update_cart" value="update">Update Cart</button>
-                  </form>
-                </td>
-                <td>£<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></td>
-                <td><a href="./cart.php?remove=<?php echo $fetch_cart['id']; ?>" class="delete-btn" onclick="return confirm('Remove Item from Cart?');">Remove<span> <i class="fa-solid fa-trash"></i></span></a></td>
-              </tr>
+          <tr>
+            <td><img src="images/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
+            <td><?php echo $fetch_cart['name']; ?></td>
+            <td>£<?php echo $fetch_cart['price']; ?></td>
+            <td>
+              <form action="" method="post">
+                <input type="hidden" name="cart_id" value="<?php echo $fetch_cart['id']; ?>">
+                <input type="number" min="1" name="cart_quantity" value="<?php echo $fetch_cart['quantity']; ?>">
+                <!-- <input type="submit" name="update_cart" value="update" class="option-btn"> -->
+                <button class="option-btn" type="submit" name="update_cart" value="update">Update Cart</button>
+              </form>
+            </td>
+            <td>£<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?></td>
+            <td><a href="./cart.php?remove=<?php echo $fetch_cart['id']; ?>" class="delete-btn"
+                onclick="return confirm('Remove Item from Cart?');">Remove<span> <i
+                    class="fa-solid fa-trash"></i></span></a></td>
+          </tr>
           <?php
               $grand_total += $sub_total;
             }
@@ -233,13 +238,16 @@ if (isset($_GET['delete_all'])) {
           <tr class="table-bottom">
             <td colspan="4">grand total :</td>
             <td>£<?php echo $grand_total; ?></td>
-            <td><a href="./cart.php?delete_all" onclick="return confirm('delete all from cart?');" class="delete-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">Delete All <span><i class="fa-solid fa-trash"></i></span></a></td>
+            <td><a href="./cart.php?delete_all" onclick="return confirm('delete all from cart?');"
+                class="delete-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">Delete All <span><i
+                    class="fa-solid fa-trash"></i></span></a></td>
           </tr>
         </tbody>
       </table>
 
       <div class="checkout-btn">
-        <a href="#" class="check-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">Proceed to Checkout <i class="fa-solid fa-basket-shopping"></i></a>
+        <a href="#" class="check-btn <?php echo ($grand_total > 1) ? '' : 'disabled'; ?>">Proceed to Checkout <i
+            class="fa-solid fa-basket-shopping"></i></a>
       </div>
 
     </div>
